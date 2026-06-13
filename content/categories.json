@@ -1,0 +1,12 @@
+[
+  { "slug": "dasturlash", "name": "Dasturlash" },
+  { "slug": "karyera", "name": "Karyera va kasbiy rivojlanish" },
+  { "slug": "data-science", "name": "Ma'lumotlar fanlari va AI" },
+  { "slug": "oquv-kurslar", "name": "O'quv kurslari va manbalar" },
+  { "slug": "universitet", "name": "Universitet va xalqaro ta'lim" },
+  { "slug": "backend", "name": "Backend va frameworklar" },
+  { "slug": "mobil", "name": "Mobil dasturlash" },
+  { "slug": "junior", "name": "Junior dasturchilar uchun" },
+  { "slug": "texnologiya", "name": "Texnologiya yangiliklari" },
+  { "slug": "shaxsiy-rivojlanish", "name": "Shaxsiy rivojlanish" }
+]
