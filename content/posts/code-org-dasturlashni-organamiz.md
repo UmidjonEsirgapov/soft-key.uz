@@ -4,22 +4,18 @@ slug: "code-org-dasturlashni-organamiz"
 description: "Code.org loyihasi yordamida dasturlashni o'rganing. Dasturlash soati tashabbusiga qanday qo'shilish va o'zbek tilidagi tarjima ishlarida qatnashishni bilib oling."
 date: "2026-06-13"
 updatedAt: "2026-06-13"
-image: "https://www.texnoman.uz/uploads/blogs/b21798fbf1902bcd541cc9b2bdaf3df1.png"
 categories: ["dasturlash", "oquv-kurslar"]
 tags: ["code-org", "dasturlash", "it-talim", "dasturlash-soati", "dasturchi"]
-sourceUrl: "https://www.texnoman.uz/post/code-org-dasturlashni-organamiz.html"
 wordCount: 252
 ---
 
-## Dasturlash kelajak kalitidir
-
 Ko'pchiligimiz hayotda muvaffaqiyatga erishishni, dunyoni yaxshiroq tomonga o'zgartirishni orzu qilamiz. Bugungi raqamli asrda esa bu orzularning ro'yobi bevosita kompyuter texnologiyalari bilan chambarchas bog'liq. Stiv Jobs yoki Bil Geyts kabi buyuk insonlar izidan borish uchun dasturlashni o'rganish — eng to'g'ri tanlovdir. Ko'pchilik dasturlashni juda murakkab deb o'ylaydi, ammo bu shunchaki noto'g'ri qarash. Hatto gumanitar soha vakillari ham qisqa vaqt ichida dasturlash asoslarini o'zlashtirishi mumkin.
 
-### Code.org va "Dasturlash soati" loyihasi
+## Code.org va "Dasturlash soati" loyihasi
 
 Code.org — butun dunyoda IT ta'limini ommalashtirishga qaratilgan yirik notijorat tashkilotdir. Ular har yili dekabr oyida butun dunyo bo'ylab "Dasturlash soati" (Hour of Code) aksiyasini o'tkazishadi. Bu tashabbus insonlarga dasturlash dunyosini qiziqarli va sodda formatda ochib berishni maqsad qiladi. Loyiha haqida ko'proq ma'lumot olish uchun [code.org 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) videosini tomosha qilishingizni tavsiya etamiz.
 
-### Qanday qilib hissa qo'shish mumkin?
+## Qanday qilib hissa qo'shish mumkin?
 
 O'zbekistonning ushbu xalqaro harakatda faol ishtirok etishi juda muhim. Siz quyidagi yo'llar bilan loyihani qo'llab-quvvatlashingiz mumkin:
 
@@ -30,6 +26,6 @@ O'zbekistonning ushbu xalqaro harakatda faol ishtirok etishi juda muhim. Siz quy
 
 Qo'shimcha resurslar va videolarning subtitrlari ustida ishlash uchun [mana bu](https://code.org/translate) havolaga o'tishingiz mumkin. Tarjimonlik faoliyatida tajriba orttirish istagida bo'lgan yoshlar uchun bu ajoyib imkoniyatdir.
 
-### Xulosa
+## Xulosa
 
 Dasturlashni o'rganish nafaqat kasb, balki dunyoqarashni kengaytiradigan vositadir. [Bahriddin Bahodirovich](http://bb.muloqot.uz/2015/10/code-org-dasturlashni-organamiz/) ta'kidlaganidek, barchamiz birlashib, kelajagimizni ijobiy tomonga o'zgartira olamiz. Keling, bugundan dasturlash sari ilk qadamni tashlaylik!

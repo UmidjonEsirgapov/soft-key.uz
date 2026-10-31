@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "www.texnoman.uz" },
-      { protocol: "https", hostname: "texnoman.uz" },
-    ],
+  async redirects() {
+    return [
+      { source: "/kategoriya/data-science", destination: "/kategoriya/dasturlash", permanent: true },
+      { source: "/kategoriya/mobil", destination: "/kategoriya/dasturlash", permanent: true },
+    ];
   },
 };
 

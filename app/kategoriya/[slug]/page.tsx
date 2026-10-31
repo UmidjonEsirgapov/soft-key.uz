@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArticleCard } from "@/components/ArticleCard";
-import { Pagination } from "@/components/Pagination";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageHeader } from "@/components/PageHeader";
+import { PostGrid } from "@/components/PostGrid";
 import { JsonLd } from "@/components/JsonLd";
 import { getCategoryBySlug, categories } from "@/lib/categories";
 import { getPostsByCategory, paginatePosts } from "@/lib/posts";
@@ -26,7 +25,7 @@ export async function generateMetadata({
 
   return buildPageMetadata({
     title: category.name,
-    description: `${category.name} bo'yicha maqolalar — Soft Key blogi. Texnologiya va ta'lim mavzularida foydali kontent.`,
+    description: category.description,
     path: `/kategoriya/${slug}`,
     keywords: [category.slug, category.name, "maqolalar", "soft key"],
   });
@@ -49,48 +48,31 @@ export default async function CategoryPage({
   const { posts, totalPages, currentPage } = paginatePosts(allPosts, page);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <>
       <JsonLd
         data={buildBreadcrumbJsonLd([
           { name: "Bosh sahifa", path: "/" },
-          { name: "Kategoriyalar", path: "/blog" },
+          { name: "Mavzular", path: "/mavzular" },
           { name: category.name, path: `/kategoriya/${slug}` },
         ])}
       />
-
-      <Breadcrumbs
-        items={[
+      <PageHeader
+        breadcrumbs={[
           { label: "Bosh sahifa", href: "/" },
-          { label: "Maqolalar", href: "/blog" },
+          { label: "Mavzular", href: "/mavzular" },
           { label: category.name },
         ]}
+        eyebrow={`${allPosts.length} ta maqola`}
+        title={category.name}
+        description={category.description}
+        color={category.color}
       />
-
-      <h1 className="mb-2 text-2xl font-bold text-slate-900 sm:text-3xl">
-        {category.name}
-      </h1>
-      <p className="mb-6 text-sm text-slate-600 sm:mb-8 sm:text-base">
-        {allPosts.length > 0
-          ? `${allPosts.length} ta maqola`
-          : "Hozircha maqolalar yo'q"}
-      </p>
-
-      {posts.length > 0 ? (
-        <>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-            {posts.map((post) => (
-              <ArticleCard key={post.slug} post={post} />
-            ))}
-          </div>
-          <Pagination
-            basePath={`/kategoriya/${slug}`}
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
-        </>
-      ) : (
-        <p className="text-slate-500">Bu kategoriyada hozircha maqolalar yo&apos;q.</p>
-      )}
-    </div>
+      <PostGrid
+        posts={posts}
+        basePath={`/kategoriya/${slug}`}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
+    </>
   );
 }

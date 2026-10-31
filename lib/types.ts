@@ -1,6 +1,9 @@
 export interface Category {
   slug: string;
   name: string;
+  short: string;
+  color: string;
+  description: string;
 }
 
 export interface PostFrontmatter {
@@ -9,13 +12,19 @@ export interface PostFrontmatter {
   description: string;
   date: string;
   updatedAt?: string;
-  image?: string;
   categories: string[];
   tags: string[];
-  sourceUrl?: string;
   wordCount?: number;
 }
 
 export interface Post extends PostFrontmatter {
   content: string;
+  image?: string;
+  readingMinutes: number;
+}
+
+export interface TocItem {
+  id: string;
+  text: string;
+  level: 2 | 3;
 }

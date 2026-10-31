@@ -1,25 +1,31 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 import { categories } from "@/lib/categories";
-import { getAllPosts, getAllTags } from "@/lib/posts";
+import { getAllPosts, getLatestPostDate } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
   const posts = getAllPosts();
-  const tags = getAllTags();
+  const lastContentUpdate = getLatestPostDate();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
-      lastModified: new Date(),
+      lastModified: lastContentUpdate,
       changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${siteUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: lastContentUpdate,
       changeFrequency: "daily",
       priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/mavzular`,
+      lastModified: lastContentUpdate,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
   ];
 
@@ -32,17 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({
     url: `${siteUrl}/kategoriya/${cat.slug}`,
-    lastModified: new Date(),
+    lastModified: lastContentUpdate,
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
-  const tagPages: MetadataRoute.Sitemap = tags.map((tag) => ({
-    url: `${siteUrl}/teg/${tag.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.5,
-  }));
-
-  return [...staticPages, ...postPages, ...categoryPages, ...tagPages];
+  return [...staticPages, ...postPages, ...categoryPages];
 }

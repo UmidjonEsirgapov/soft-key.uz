@@ -4,22 +4,18 @@ slug: "dasturchi-resume-cv-yozishda-nimalarga-etibor-berish-kerak-va-ishga-kiris
 description: "Junior dasturchi sifatida ishga kirish uchun samarali rezyume (CV) yozish bo'yicha to'liq qo'llanma. Ish beruvchilar e'tibor beradigan muhim jihatlarni o'rganing."
 date: "2026-06-13"
 updatedAt: "2026-06-13"
-image: "https://www.texnoman.uz/uploads/blogs/016b7a21a66978f405326c0bf1e2e0bc.jpeg"
 categories: ["karyera", "junior"]
 tags: ["rezyume", "dasturlash", "cv", "junior-dasturchi", "ishga-kirish"]
-sourceUrl: "https://www.texnoman.uz/post/dasturchi-resume-cv-yozishda-nimalarga-etibor-berish-kerak-va-ishga-kirishga-yordam-beradigan-rezyumeni-qanday-yozamiz.html"
 wordCount: 262
 ---
 
-## Dasturchi uchun rezyume yozish san'ati
+Agar siz 2019-yilda Dasturlashni o'rganamiz maqolasidagi tavsiyalarga amal qilib, ilk texnologiyalarni o'zlashtirgan bo'lsangiz, navbatdagi qadam — bu professional rezyume (CV) tayyorlashdir. Rezyume shunchaki qog'oz emas, balki sizning ish beruvchi bilan bo'lgan birinchi uchrashuvingizdir. Sifatli CV sizni suhbat (interview) bosqichiga olib chiqadigan eng muhim vositadir.
 
-Agar siz [2019-yilda Dasturlashni o'rganamiz](https://www.texnoman.uz/post/2019-yilda-dasturlashni-organing.html) maqolasidagi tavsiyalarga amal qilib, ilk texnologiyalarni o'zlashtirgan bo'lsangiz, navbatdagi qadam — bu professional rezyume (CV) tayyorlashdir. Rezyume shunchaki qog'oz emas, balki sizning ish beruvchi bilan bo'lgan birinchi uchrashuvingizdir. Sifatli CV sizni suhbat (interview) bosqichiga olib chiqadigan eng muhim vositadir.
-
-### Nega CV muhim?
+## Nega CV muhim?
 
 Ish beruvchilar junior dasturchilarda tajribadan ko'ra, o'rganishga bo'lgan ishtiyoq, texnologiyalarga nisbatan hurmat va tizimli izlanish qobiliyatini qadrlashadi. Ular sizni darhol katta loyihalarga jalb qilishmaydi, balki ustozlar ko'magida o'sishingiz uchun imkoniyat yaratadilar. Shu sababli, rezyumeda o'z salohiyatingizni to'g'ri ko'rsatish juda muhim.
 
-### CV yozishdagi oltin qoidalar
+## CV yozishdagi oltin qoidalar
 
 Rekruterlar rezyumeni o'qishga o'rtacha 15-20 soniya vaqt ajratishadi. Shu sababli quyidagilarga amal qiling:
 
@@ -28,7 +24,7 @@ Rekruterlar rezyumeni o'qishga o'rtacha 15-20 soniya vaqt ajratishadi. Shu sabab
 * **Rostgo'ylik:** Bilmaydigan texnologiyalaringizni yozmang. Bu suhbat jarayonida osongina fosh bo'ladi.
 * **Moslashtirish:** Har bir ish e'loniga qarab, rezyumeni o'sha talablarga moslab tahrirlang.
 
-### Rezyume tarkibi
+## Rezyume tarkibi
 
 Siz o'z CV'ingizni quyidagi tartibda shakllantirishingiz tavsiya etiladi:
 
@@ -40,6 +36,6 @@ Siz o'z CV'ingizni quyidagi tartibda shakllantirishingiz tavsiya etiladi:
 
 Agar siz «self-taught» ya'ni mustaqil o'rgangan dasturchi bo'lsangiz, o'zingiz qilgan real loyihalarga urg'u bering. [Shokhrukh Khalilov(Muhammadxalil)](https://medium.com/alidesign/dasturchi-resume-cv-yozishda-nimalarga-etibor-berish-kerak-va-ishga-kirishga-yordam-beradigan-c0de78241558?fbclid=IwAR0N_nw7gqZ3JMyVtFP9wjZ6LTw-gvtYz1LfZJN1KmGrJJllVyBWLLkEqCg) ta'kidlaganidek, tayyor shablonlardan foydalanish jarayonni osonlashtiradi.
 
-### Xulosa
+## Xulosa
 
 To'g'ri yozilgan rezyume — bu ishga kirish yo'lidagi birinchi yirik g'alabangizdir. O'z mahoratingizni, Githubdagi ishlaringizni va o'rganishga bo'lgan qobiliyatingizni CV'da yorqin aks ettiring. Muvaffaqiyatlar tilaymiz!

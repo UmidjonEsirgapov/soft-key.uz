@@ -1,57 +1,93 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Post } from "@/lib/types";
-import { getCategoryName } from "@/lib/categories";
+import { getCategoryColor, getCategoryShort } from "@/lib/categories";
+import { Cover } from "./Cover";
 
 interface ArticleCardProps {
   post: Post;
+  variant?: "default" | "featured" | "compact";
+  priority?: boolean;
 }
 
-export function ArticleCard({ post }: ArticleCardProps) {
-  const primaryCategory = post.categories[0];
+function Meta({ post }: { post: Post }) {
+  const category = post.categories[0];
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
-      <Link href={`/blog/${post.slug}`} className="block">
-        <div className="relative aspect-[16/9] bg-slate-100">
-          {post.image ? (
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className="object-cover transition group-hover:scale-[1.02]"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-          ) : (
-            <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100 text-sm text-slate-400">
-              Soft Key
-            </div>
-          )}
-        </div>
-        <div className="flex flex-1 flex-col p-5">
-          {primaryCategory && (
-            <span className="mb-2 text-xs font-medium uppercase tracking-wide text-blue-600">
-              {getCategoryName(primaryCategory)}
-            </span>
-          )}
-          <h2 className="mb-2 text-lg font-semibold leading-snug text-slate-900 group-hover:text-blue-700">
+    <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-ink-3">
+      {category && (
+        <span className="inline-flex items-center gap-1.5 text-ink-2">
+          <span className="h-2 w-2 rounded-[3px]" style={{ background: getCategoryColor(category) }} />
+          {getCategoryShort(category)}
+        </span>
+      )}
+      <span aria-hidden>·</span>
+      <span>{post.readingMinutes} daq o&apos;qish</span>
+    </div>
+  );
+}
+
+export function ArticleCard({ post, variant = "default", priority }: ArticleCardProps) {
+  const href = `/blog/${post.slug}`;
+
+  if (variant === "compact") {
+    return (
+      <Link href={href} className="group flex gap-4 py-4">
+        <Cover post={post} sizes="96px" className="h-20 w-24 shrink-0 rounded-lg" />
+        <div className="min-w-0">
+          <Meta post={post} />
+          <h3 className="mt-1.5 line-clamp-2 font-display text-[15px] font-semibold leading-snug text-ink group-hover:text-accent-ink">
             {post.title}
-          </h2>
-          <p className="mb-4 line-clamp-3 flex-1 text-sm text-slate-600">
-            {post.description}
-          </p>
-          <time
-            dateTime={post.date}
-            className="text-xs text-slate-400"
-          >
-            {new Date(post.date).toLocaleDateString("uz-UZ", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+          </h3>
         </div>
       </Link>
-    </article>
+    );
+  }
+
+  if (variant === "featured") {
+    return (
+      <Link
+        href={href}
+        className="group grid overflow-hidden rounded-2xl border border-line bg-card transition hover:border-ink-3 md:grid-cols-[1.25fr_1fr]"
+      >
+        <Cover
+          post={post}
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 640px"
+          className="aspect-[16/10] md:aspect-auto md:min-h-80"
+        />
+        <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
+          <Meta post={post} />
+          <h2 className="font-display text-2xl font-bold leading-tight tracking-tight text-ink group-hover:text-accent-ink sm:text-3xl">
+            {post.title}
+          </h2>
+          <p className="line-clamp-3 text-ink-2">{post.description}</p>
+          <span className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink">
+            O&apos;qishni boshlash
+            <span className="transition group-hover:translate-x-1" aria-hidden>→</span>
+          </span>
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition hover:-translate-y-0.5 hover:border-ink-3 hover:shadow-[0_6px_0_var(--key-shadow)]"
+    >
+      <Cover
+        post={post}
+        priority={priority}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+        className="aspect-[16/10]"
+      />
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        <Meta post={post} />
+        <h2 className="font-display text-lg font-semibold leading-snug text-ink group-hover:text-accent-ink">
+          {post.title}
+        </h2>
+        <p className="line-clamp-2 text-sm leading-relaxed text-ink-2">{post.description}</p>
+      </div>
+    </Link>
   );
 }

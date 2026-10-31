@@ -1,12 +1,65 @@
 [
-  { "slug": "dasturlash", "name": "Dasturlash" },
-  { "slug": "karyera", "name": "Karyera va kasbiy rivojlanish" },
-  { "slug": "data-science", "name": "Ma'lumotlar fanlari va AI" },
-  { "slug": "oquv-kurslar", "name": "O'quv kurslari va manbalar" },
-  { "slug": "universitet", "name": "Universitet va xalqaro ta'lim" },
-  { "slug": "backend", "name": "Backend va frameworklar" },
-  { "slug": "mobil", "name": "Mobil dasturlash" },
-  { "slug": "junior", "name": "Junior dasturchilar uchun" },
-  { "slug": "texnologiya", "name": "Texnologiya yangiliklari" },
-  { "slug": "shaxsiy-rivojlanish", "name": "Shaxsiy rivojlanish" }
+  {
+    "slug": "dasturlash",
+    "name": "Dasturlash",
+    "short": "Kod",
+    "color": "#c9d8ff",
+    "description": "Dasturlash tillari, algoritmlar, toza kod va dasturchining kundalik vositalari haqida amaliy maqolalar."
+  },
+  {
+    "slug": "suniy-intellekt",
+    "name": "Sun'iy intellekt (AI)",
+    "short": "AI",
+    "color": "#d9c9ff",
+    "description": "Sun'iy intellekt, machine learning va AI yordamchilar: ular qanday ishlaydi, dasturchi ulardan qanday foydalanadi va qayerdan o'rganishni boshlash kerak."
+  },
+  {
+    "slug": "karyera",
+    "name": "Karyera va kasbiy rivojlanish",
+    "short": "Karyera",
+    "color": "#ffd8b5",
+    "description": "IT sohasida ish topish, rezyume, intervyu va dasturchi sifatida o'sish bo'yicha tajribalar."
+  },
+  {
+    "slug": "junior",
+    "name": "Junior dasturchilar uchun",
+    "short": "Junior",
+    "color": "#ddf2b5",
+    "description": "Endi boshlayotganlar uchun yo'l xaritalari, birinchi ishga kirish va juniordan keyingi bosqich haqida."
+  },
+  {
+    "slug": "oquv-kurslar",
+    "name": "O'quv kurslari va manbalar",
+    "short": "Kurslar",
+    "color": "#c8eed9",
+    "description": "Bepul va pullik kurslar, sertifikatlar, kitoblar va o'zbek tilidagi foydali o'quv manbalari."
+  },
+  {
+    "slug": "universitet",
+    "name": "Universitet va xalqaro ta'lim",
+    "short": "Ta'lim",
+    "color": "#ffe7a3",
+    "description": "Xorijda o'qish, universitetga hujjat topshirish, testlar va grantlar bo'yicha qo'llanmalar."
+  },
+  {
+    "slug": "backend",
+    "name": "Backend va frameworklar",
+    "short": "Backend",
+    "color": "#bfe6f2",
+    "description": "Server tomoni, ma'lumotlar bazalari, PHP, Python va zamonaviy frameworklar bilan ishlash."
+  },
+  {
+    "slug": "texnologiya",
+    "name": "Texnologiya yangiliklari",
+    "short": "Yangiliklar",
+    "color": "#dcdfe6",
+    "description": "Texnologiya kompaniyalari, milliy IT loyihalar, operatsion tizimlar va soha yangiliklari."
+  },
+  {
+    "slug": "shaxsiy-rivojlanish",
+    "name": "Shaxsiy rivojlanish",
+    "short": "O'sish",
+    "color": "#f3cfe8",
+    "description": "Motivatsiya, vaqtni boshqarish, o'z ustida ishlash va IT'dagi shaxsiy tajribalar."
+  }
 ]

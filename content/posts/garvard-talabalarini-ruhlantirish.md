@@ -1,21 +1,17 @@
 ---
-title: "Garvard talabalari tajribasi: Muvaffaqiyatga erishishning 17 oltin qoidasi"
+title: "Garvard talabalaridan muvaffaqiyatning 17 qoidasi"
 slug: "garvard-talabalarini-ruhlantirish"
 description: "Garvard talabalarining muvaffaqiyat sirlarini o'rganing. O'qishga bo'lgan motivatsiya va maqsad sari intilish bo'yicha 17 ta muhim tavsiyani bizning maqolada o'qing."
 date: "2026-06-13"
 updatedAt: "2026-06-13"
-image: "https://www.texnoman.uz/uploads/blogs/97760f32efc4e4158fd0e1057faae44a.jpg"
 categories: ["universitet", "shaxsiy-rivojlanish"]
 tags: ["motivatsiya", "talabalik", "muvaffaqiyat", "garvard", "shaxsiy-rivojlanish"]
-sourceUrl: "https://www.texnoman.uz/post/garvard-talabalarini-ruhlantirish.html"
 wordCount: 265
 ---
 
-## Talabalik davrida motivatsiyani qanday saqlash kerak?
-
 Har bir bilim olishga intilgan inson yo'lida qiyinchiliklarga duch keladi. Dunyoning eng nufuzli dargohlaridan biri bo'lgan Garvard universitetida talabalar muvaffaqiyatga erishish uchun qanday falsafaga amal qilishadi? Quyida keltirilgan tamoyillar [Akmal Xushvaqov](http://uzadmin.blogspot.com/2012/10/garvard-talabalarini-ruhlantirish.html) tomonidan tarjima qilingan va talabalar uchun muhim ruhiy kuch bag'ishlaydi.
 
-### Muvaffaqiyat kalitlari
+## Muvaffaqiyat kalitlari
 
 1. Uyqudan voz kechib o'qish - orzularingizni reallikka aylantirishning yagona yo'li.
 2. "Kech qoldi" degan fikr shunchaki bahona; har doim yangi boshlanish uchun fursat mavjud.
@@ -35,6 +31,6 @@ Har bir bilim olishga intilgan inson yo'lida qiyinchiliklarga duch keladi. Dunyo
 16. Raqobatchilaringiz ham uxlamayapti, ular ham bilim olishmoqda.
 17. Hech qanday yutuq kurashsiz va qiyinchiliklarsiz qo'lga kiritilmaydi. [Manba](http://www-958.ibm.com/software/data/cognos/manyeyes/datasets/motivation-of-students-at-harvard/versions/1.txt)
 
-### Xulosa
+## Xulosa
 
 Garvard talabalari duch keladigan ushbu tamoyillar shuni ko'rsatadiki, muvaffaqiyat tasodif emas, u izchil harakat va o'z ustida ishlash mahsulidir. Agar siz o'z kelajagingizni qurishni istasangiz, vaqtni qadrlang va bugunoq ilk qadamni tashlang.

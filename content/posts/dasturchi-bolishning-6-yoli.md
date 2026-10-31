@@ -4,18 +4,14 @@ slug: "dasturchi-bolishning-6-yoli"
 description: "IT olamiga kirib kelmoqchimisiz? Dasturlashni boshlashning 6 ta asosiy yo'nalishi hamda muvaffaqiyatga erishish uchun zarur bo'lgan bosqichlarni batafsil o'rganing."
 date: "2026-06-13"
 updatedAt: "2026-06-13"
-image: "https://www.texnoman.uz/uploads/blogs/5bca910653a7f9e2972f7fc446e353b9.jpg"
 categories: ["dasturlash", "karyera"]
 tags: ["dasturlash", "web-dasturlash", "it-ta'lim", "dasturchi-bolish", "karyera"]
-sourceUrl: "https://www.texnoman.uz/post/dasturchi-bolishning-6-yoli.html"
 wordCount: 276
 ---
 
-## Dasturlash sohasida muvaffaqiyat sari qadamlar
-
 IT sohasi bugungi kunda eng tez rivojlanayotgan va yuqori daromad keltiradigan yo'nalishlardan biridir. Dasturchi bo'lish — bu bir kunlik ish emas, balki doimiy izlanish va amaliyot talab qiladigan bosqichma-bosqich jarayondir. Agar siz ham texnologiyalar olamiga kirib kelmoqchi bo'lsangiz, avvalo qaysi yo'nalish sizga yaqinroq ekanini aniqlab olishingiz lozim. [Sherali Turdiyev](http://dasturchi.uz/plangs/dasturchi-bolishning-6-yoli/) ta'kidlaganidek, dasturlashda tizimli yondashuv juda muhim.
 
-### Asosiy ko'nikmalarni shakllantirish
+## Asosiy ko'nikmalarni shakllantirish
 
 Har qanday dasturlash yo'nalishini tanlashdan qat'iy nazar, dastlabki poydevorni to'g'ri qo'yish kerak. Bunga quyidagilar kiradi:
 
@@ -23,7 +19,7 @@ Har qanday dasturlash yo'nalishini tanlashdan qat'iy nazar, dastlabki poydevorni
 * **Dasturlash tillari:** Python, C++ yoki Java kabi tillar boshlang'ich bilim uchun juda mos keladi.
 * **Ma'lumotlar bazasi (DB):** SQL so'rovlari, jadvallar va ma'lumotlar tuzilmasi bilan ishlashni o'rganish har qanday zamonaviy dasturchining burchidir. MySQL bu borada eng qulay vositalardan biridir.
 
-### Dasturlashning 6 ta asosiy yo'nalishi
+## Dasturlashning 6 ta asosiy yo'nalishi
 
 Siz o'z faoliyatingizni quyidagi yo'nalishlarning birida davom ettirishingiz mumkin:
 
@@ -34,6 +30,6 @@ Siz o'z faoliyatingizni quyidagi yo'nalishlarning birida davom ettirishingiz mum
 5. **Tizim dasturlash:** Operatsion tizim yadrosi, drayverlar va kompilyatorlar ustida ishlash.
 6. **Ilmiy dasturlash:** Murakkab hisob-kitoblar va ilmiy tadqiqotlar uchun dasturiy yechimlar ishlab chiqish.
 
-### Xulosa
+## Xulosa
 
 Dasturlash olamiga kirib borishda eng muhimi — amaliyotdir. Veb-saytlar kodlarini kuzating, brainstorming uslublarini o'rganing va tizimli ravishda o'z loyihalaringizni yarating. Har qanday yo'nalishni tanlamang, uning texnologiyalarini chuqur o'rganish va doimiy ravishda yangi bilimlar olish kelajakda professional dasturchi bo'lib yetishishingizga zamin yaratadi.

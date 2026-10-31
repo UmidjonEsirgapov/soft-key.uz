@@ -85,7 +85,9 @@ export function buildPageMetadata({
 
 export function buildPostMetadata(post: Post): Metadata {
   const url = `${getSiteUrl()}/blog/${post.slug}`;
-  const ogImage = post.image ?? `${getSiteUrl()}/opengraph-image`;
+  const ogImage = post.image
+    ? `${getSiteUrl()}${post.image}`
+    : `${getSiteUrl()}/opengraph-image`;
 
   return {
     title: `${post.title} | ${SITE_NAME}`,
@@ -107,7 +109,7 @@ export function buildPostMetadata(post: Post): Metadata {
         {
           url: ogImage,
           width: 1200,
-          height: 630,
+          height: post.image ? 675 : 630,
           alt: post.title,
         },
       ],
@@ -172,7 +174,11 @@ export function buildArticleJsonLd(post: Post): Record<string, unknown> {
     description: post.description,
     datePublished: post.date,
     dateModified: post.updatedAt ?? post.date,
-    image: post.image ? [post.image] : [`${getSiteUrl()}/opengraph-image`],
+    image: [
+      post.image
+        ? `${getSiteUrl()}${post.image}`
+        : `${getSiteUrl()}/opengraph-image`,
+    ],
     inLanguage: "uz",
     author: {
       "@type": "Organization",

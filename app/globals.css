@@ -1,102 +1,273 @@
 @import "tailwindcss";
 
+/* Paper-and-ink palette; the accent is the orange of an Esc keycap. */
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --paper: #f6f3ec;
+  --paper-2: #efeadf;
+  --card: #fffdf8;
+  --ink: #16171b;
+  --ink-2: #4a4c55;
+  --ink-3: #7c7f89;
+  --line: #e2dccf;
+  --accent: #ff5a1f;
+  --accent-ink: #c2410c;
+  --key-shadow: #d8d1c2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121317;
+    --paper-2: #1a1b21;
+    --card: #1c1d23;
+    --ink: #f1eee7;
+    --ink-2: #b9b8b3;
+    --ink-3: #85858a;
+    --line: #2c2d35;
+    --accent: #ff7a45;
+    --accent-ink: #ff9a6e;
+    --key-shadow: #08090b;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-grotesk);
+  --font-mono: var(--font-mono-jb);
 }
 
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
 
-.prose {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+::selection {
+  background: var(--accent);
+  color: #fff;
 }
 
-.prose h2 {
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
-.prose h3 {
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
+/* A physical keycap: flat top, darker bottom edge that compresses on press. */
+.keycap {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 0 var(--key-shadow);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.keycap:hover {
+  border-color: var(--ink-3);
+}
+
+.keycap:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--key-shadow);
+}
+
+.keycap-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 3px 0 var(--accent-ink);
+}
+
+.keycap-accent:hover {
+  border-color: var(--accent-ink);
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at 30% 20%, #000 0%, transparent 70%);
+}
+
+/* Article typography */
+.article {
   font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 640px) {
-  .prose h2 {
-    margin-top: 2rem;
-    font-size: 1.375rem;
-  }
-
-  .prose h3 {
-    margin-top: 1.5rem;
+  .article {
     font-size: 1.125rem;
   }
 }
 
-.prose p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
+.article > * + * {
+  margin-top: 1.15em;
 }
 
-.prose ul,
-.prose ol {
-  margin-bottom: 1rem;
-  padding-left: 1.25rem;
+.article h2,
+.article h3 {
+  font-family: var(--font-display), sans-serif;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-@media (min-width: 640px) {
-  .prose ul,
-  .prose ol {
-    padding-left: 1.5rem;
-  }
+.article h2 {
+  margin-top: 2.2em;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.prose li {
-  margin-bottom: 0.25rem;
+.article h3 {
+  margin-top: 1.8em;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.prose a {
-  color: #2563eb;
+.article strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.article a {
+  color: var(--ink);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
-.prose img {
+.article a:hover {
+  color: var(--accent-ink);
+}
+
+.article ul,
+.article ol {
+  padding-left: 1.4em;
+}
+
+.article ul {
+  list-style: none;
+}
+
+.article ul > li {
+  position: relative;
+}
+
+.article ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.1em;
+  top: 0.72em;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.article ol {
+  list-style: decimal;
+}
+
+.article ol > li::marker {
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.article li + li {
+  margin-top: 0.4em;
+}
+
+.article blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.25em 0 0.25em 1.1em;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.article code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+}
+
+.article pre {
+  overflow-x: auto;
+  background: #16171b;
+  color: #f1eee7;
+  border-radius: 12px;
+  padding: 1.1em 1.25em;
+  font-size: 0.88em;
+  line-height: 1.65;
+}
+
+.article pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.article img {
   max-width: 100%;
   height: auto;
-  margin: 1.25rem 0;
-  border-radius: 0.5rem;
+  border-radius: 12px;
 }
 
-.prose pre,
-.prose code {
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.prose table {
+.article table {
   display: block;
   overflow-x: auto;
-  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.article th,
+.article td {
+  border: 1px solid var(--line);
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+.article th {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.article hr {
+  border: 0;
+  border-top: 1px dashed var(--line);
+  margin: 2.5em 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .keycap,
+  .keycap:active {
+    transition: none;
+    transform: none;
+  }
 }

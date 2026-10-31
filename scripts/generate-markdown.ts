@@ -18,10 +18,8 @@ export function generateMarkdownFile(
     description: result.description,
     date: raw.publishedAt,
     updatedAt: new Date().toISOString().slice(0, 10),
-    image: raw.image,
     categories: result.categories,
     tags: result.tags,
-    sourceUrl: raw.sourceUrl,
     wordCount: countWords(result.content),
   };
 
@@ -38,7 +36,12 @@ export function generateMarkdownFile(
     })
     .join("\n");
 
-  return `---\n${yaml}\n---\n\n${result.content.trim()}\n`;
+  // Source links are dropped so published posts never point back to the scraped site.
+  const content = result.content
+    .replace(/!\[[^\]]*\]\(https?:\/\/(?:www\.)?texnoman\.uz[^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\(https?:\/\/(?:www\.)?texnoman\.uz[^)]*\)/g, "$1");
+
+  return `---\n${yaml}\n---\n\n${content.trim()}\n`;
 }
 
 export function saveMarkdown(raw: ScrapedArticle, result: RewriteResult) {

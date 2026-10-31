@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { ArticleCard } from "@/components/ArticleCard";
-import { Pagination } from "@/components/Pagination";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
+import { PostGrid } from "@/components/PostGrid";
 import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
+import { categories } from "@/lib/categories";
 
 interface BlogPageProps {
   searchParams: Promise<{ page?: string }>;
@@ -45,40 +46,31 @@ export async function generateMetadata({
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = await searchParams;
   const page = Number(params.page ?? "1");
-  const { posts, totalPages, currentPage } = paginatePosts(getAllPosts(), page);
+  const all = getAllPosts();
+  const { posts, totalPages, currentPage } = paginatePosts(all, page);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
-      <Breadcrumbs
-        items={[
-          { label: "Bosh sahifa", href: "/" },
-          { label: "Maqolalar" },
-        ]}
-      />
-      <h1 className="mb-6 text-2xl font-bold text-slate-900 sm:mb-8 sm:text-3xl">
-        Maqolalar
-        {currentPage > 1 && (
-          <span className="ml-2 text-lg font-normal text-slate-500 sm:text-xl">
-            — {currentPage}-sahifa
-          </span>
-        )}
-      </h1>
-      {posts.length > 0 ? (
-        <>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-            {posts.map((post) => (
-              <ArticleCard key={post.slug} post={post} />
-            ))}
-          </div>
-          <Pagination
-            basePath="/blog"
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
-        </>
-      ) : (
-        <p className="text-slate-500">Hozircha maqolalar mavjud emas.</p>
-      )}
-    </div>
+    <>
+      <PageHeader
+        breadcrumbs={[{ label: "Bosh sahifa", href: "/" }, { label: "Maqolalar" }]}
+        eyebrow={`${all.length} ta maqola${currentPage > 1 ? ` · ${currentPage}-sahifa` : ""}`}
+        title="Barcha maqolalar"
+        description="Dasturlash, karyera, kurslar va ta'lim haqida yozilgan hamma narsa bir joyda."
+      >
+        <div className="mt-6 flex flex-wrap gap-2">
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/kategoriya/${cat.slug}`}
+              className="keycap inline-flex h-9 items-center gap-2 rounded-lg px-3 text-sm text-ink-2"
+            >
+              <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: cat.color }} />
+              {cat.short}
+            </Link>
+          ))}
+        </div>
+      </PageHeader>
+      <PostGrid posts={posts} basePath="/blog" currentPage={currentPage} totalPages={totalPages} />
+    </>
   );
 }

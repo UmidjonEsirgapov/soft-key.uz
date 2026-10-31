@@ -13,7 +13,7 @@ export function TagList({ tags }: TagListProps) {
         <Link
           key={tag}
           href={`/teg/${tag.toLowerCase()}`}
-          className="inline-flex min-h-9 items-center rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+          className="keycap inline-flex min-h-9 items-center rounded-lg px-3 font-mono text-xs text-ink-2"
         >
           #{tag}
         </Link>

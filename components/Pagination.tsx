@@ -53,13 +53,13 @@ export function Pagination({
       {prevHref ? (
         <a
           href={prevHref}
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-slate-200 px-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg keycap px-3 text-sm font-medium text-ink-2"
           aria-label="Oldingi sahifa"
         >
           ←
         </a>
       ) : (
-        <span className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-slate-100 px-3 text-sm text-slate-300">
+        <span className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-line px-3 text-sm text-ink-3 opacity-50">
           ←
         </span>
       )}
@@ -69,7 +69,7 @@ export function Pagination({
           page === "..." ? (
             <span
               key={`ellipsis-${index}`}
-              className="inline-flex min-h-11 min-w-8 items-center justify-center text-slate-400"
+              className="inline-flex min-h-11 min-w-8 items-center justify-center text-ink-3"
             >
               …
             </span>
@@ -78,10 +78,10 @@ export function Pagination({
               key={page}
               href={page === 1 ? basePath : `${basePath}?page=${page}`}
               aria-current={page === currentPage ? "page" : undefined}
-              className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-sm font-medium ${
+              className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg px-3 text-sm font-medium ${
                 page === currentPage
-                  ? "bg-blue-600 text-white"
-                  : "border border-slate-200 text-slate-600 hover:bg-slate-50"
+                  ? "keycap keycap-accent"
+                  : "keycap text-ink-2"
               }`}
             >
               {page}
@@ -93,13 +93,13 @@ export function Pagination({
       {nextHref ? (
         <a
           href={nextHref}
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-slate-200 px-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg keycap px-3 text-sm font-medium text-ink-2"
           aria-label="Keyingi sahifa"
         >
           →
         </a>
       ) : (
-        <span className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-slate-100 px-3 text-sm text-slate-300">
+        <span className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-line px-3 text-sm text-ink-3 opacity-50">
           →
         </span>
       )}

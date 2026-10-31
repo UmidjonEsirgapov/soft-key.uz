@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
@@ -12,9 +12,21 @@ import {
 } from "@/lib/seo";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "latin-ext", "cyrillic"],
+});
+
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk",
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600", "700"],
+});
+
+const mono = JetBrains_Mono({
+  variable: "--font-mono-jb",
   subsets: ["latin"],
+  weight: ["500"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +53,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#2563eb",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f3ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#121317" },
+  ],
 };
 
 export default function RootLayout({
@@ -50,13 +65,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uz" className={`${geistSans.variable} h-full antialiased`}>
+    <html
+      lang="uz"
+      className={`${inter.variable} ${grotesk.variable} ${mono.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col overflow-x-hidden">
-        <JsonLd
-          data={[buildWebsiteJsonLd(), buildOrganizationJsonLd()]}
-        />
+        <JsonLd data={[buildWebsiteJsonLd(), buildOrganizationJsonLd()]} />
+        <a
+          href="#asosiy"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        >
+          Asosiy qismga o&apos;tish
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="asosiy" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

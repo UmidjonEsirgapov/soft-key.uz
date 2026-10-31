@@ -1,6 +1,6 @@
 # Soft Key — Texnologiya va Ta'lim Blogi
 
-O'zbek tilidagi PBN blog sayti. Maqolalar Texnoman Ta'lim bo'limidan olinadi, Gemini bilan qayta yoziladi va `.md` formatda saqlanadi.
+O'zbek tilidagi texnologiya va ta'lim blogi. Maqolalar `.md` formatda saqlanadi, muqova rasmlari `public/covers/` papkasida.
 
 ## O'rnatish
 
@@ -47,3 +47,4 @@ npm start
 - `content/categories.json` — 10 ta kategoriya
 - `scripts/` — scraping va Gemini pipeline
 - `lib/` — post o'qish, SEO, o'xshash maqolalar
+- `public/covers/<slug>.webp` — muqova rasmlari (1200×675). Yangi rasm: ChatGPT'da `scripts/cover-subjects.json` uslubidagi prompt bilan yaratib, `softkey-<slug>.png` nomida saqlang va `python3 scripts/compress-covers.py <papka>` ishga tushiring.
