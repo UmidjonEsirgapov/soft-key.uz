@@ -22,6 +22,8 @@ export function getSiteUrl(): string {
   return DEFAULT_SITE_URL.replace(/\/$/, "");
 }
 
+const RSS_ALTERNATE = { "application/rss+xml": "/feed.xml" };
+
 const robotsConfig = {
   index: true,
   follow: true,
@@ -56,7 +58,7 @@ export function buildPageMetadata({
     title: path === "/" ? `${SITE_NAME} — ${title}` : `${title} | ${SITE_NAME}`,
     description,
     keywords: keywords ?? DEFAULT_KEYWORDS,
-    alternates: { canonical: url },
+    alternates: { canonical: url, types: RSS_ALTERNATE },
     robots: robotsConfig,
     openGraph: {
       title,
@@ -93,7 +95,7 @@ export function buildPostMetadata(post: Post): Metadata {
     title: `${post.title} | ${SITE_NAME}`,
     description: post.description,
     keywords: [...post.tags, ...post.categories.map(getCategoryName)],
-    alternates: { canonical: url },
+    alternates: { canonical: url, types: RSS_ALTERNATE },
     robots: robotsConfig,
     openGraph: {
       title: post.title,
@@ -136,6 +138,14 @@ export function buildWebsiteJsonLd(): Record<string, unknown> {
       name: SITE_NAME,
       url: getSiteUrl(),
     },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${getSiteUrl()}/qidiruv?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -145,7 +155,7 @@ export function buildOrganizationJsonLd(): Record<string, unknown> {
     "@type": "Organization",
     name: SITE_NAME,
     url: getSiteUrl(),
-    logo: `${getSiteUrl()}/opengraph-image`,
+    logo: `${getSiteUrl()}/logo.png`,
   };
 }
 
@@ -190,7 +200,7 @@ export function buildArticleJsonLd(post: Post): Record<string, unknown> {
       name: SITE_NAME,
       logo: {
         "@type": "ImageObject",
-        url: `${getSiteUrl()}/opengraph-image`,
+        url: `${getSiteUrl()}/logo.png`,
       },
     },
     mainEntityOfPage: {

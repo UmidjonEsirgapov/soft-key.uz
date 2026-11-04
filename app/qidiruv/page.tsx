@@ -14,7 +14,13 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-export default function SearchPage() {
+export default async function SearchPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const { q } = await searchParams;
+  const initialQuery = (Array.isArray(q) ? q[0] : q)?.slice(0, 100) ?? "";
   const entries: SearchEntry[] = getAllPosts().map((post) => ({
     slug: post.slug,
     title: post.title,
@@ -32,7 +38,7 @@ export default function SearchPage() {
         title="Qidiruv"
         description="Sarlavha, mavzu yoki kalit so'z bo'yicha maqolani toping."
       />
-      <SearchBox entries={entries} />
+      <SearchBox entries={entries} initialQuery={initialQuery} />
     </>
   );
 }

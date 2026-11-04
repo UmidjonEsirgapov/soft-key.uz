@@ -255,6 +255,38 @@ body {
   color: var(--ink);
 }
 
+.article .read-also {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 2em;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0.75rem;
+  background: var(--card);
+}
+
+.article .read-also span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.article .read-also a {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.article .read-also a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
 .article hr {
   border: 0;
   border-top: 1px dashed var(--line);

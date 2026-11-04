@@ -20,8 +20,47 @@ function stripTags(html: string): string {
     .trim();
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+export interface InlineLink {
+  href: string;
+  title: string;
+}
+
+function isTopLevel(before: string): boolean {
+  const count = (re: RegExp) => (before.match(re) ?? []).length;
+  return (
+    count(/<(ul|ol|blockquote|table)[\s>]/g) === count(/<\/(ul|ol|blockquote|table)>/g)
+  );
+}
+
+// Puts a "read also" card before a middle h2, so every post links to a related one in-content.
+function insertInlineLink(html: string, link: InlineLink): string {
+  const headings = [...html.matchAll(/<h2 /g)].map((m) => m.index ?? 0);
+  // Short posts without sections get the card before a middle paragraph instead.
+  const anchors =
+    headings.length >= 2
+      ? headings
+      : [...html.matchAll(/<p>/g)]
+          .map((m) => m.index ?? 0)
+          .filter((i) => isTopLevel(html.slice(0, i)));
+  if (anchors.length < 2) return html;
+  const at = anchors[Math.floor(anchors.length / 2)];
+  const card =
+    `<aside class="read-also"><span>Shuningdek o'qing</span>` +
+    `<a href="${link.href}">${escapeHtml(link.title)}</a></aside>\n`;
+  return html.slice(0, at) + card + html.slice(at);
+}
+
 export async function markdownToHtml(
-  markdown: string
+  markdown: string,
+  inlineLink?: InlineLink
 ): Promise<{ html: string; toc: TocItem[] }> {
   const result = await remark()
     .use(remarkGfm)
@@ -46,6 +85,10 @@ export async function markdownToHtml(
     /<a href="(https?:\/\/(?!soft-key\.uz)[^"]+)"/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer"'
   );
+
+  if (inlineLink && !html.includes(`href="${inlineLink.href}"`)) {
+    html = insertInlineLink(html, inlineLink);
+  }
 
   return { html, toc };
 }

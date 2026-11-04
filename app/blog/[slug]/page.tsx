@@ -52,8 +52,11 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const { html, toc } = await markdownToHtml(post.content);
-  const related = getRelatedPosts(post, 3);
+  const [inline, ...related] = getRelatedPosts(post, 4);
+  const { html, toc } = await markdownToHtml(
+    post.content,
+    inline && { href: `/blog/${inline.slug}`, title: inline.title }
+  );
   const tags = getLinkedTags(post.tags);
   const { previous, next } = getAdjacentPosts(post.slug);
   const updated = post.updatedAt ?? post.date;

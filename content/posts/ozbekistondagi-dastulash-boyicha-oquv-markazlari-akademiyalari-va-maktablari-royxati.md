@@ -28,4 +28,4 @@ Ko'plab o'quv markazlari, jumladan *IT-Center* filiallari barcha hududlarda yosh
 
 ## Xulosa
 
-IT sohasi — bu doimiy izlanish va o'qishni talab qiladigan yo'l. O'zbekistondagi mavjud o'quv markazlari bazasi sizga dastlabki qadamni qo'yishda yordam beradi. Esingizda tuting, muvaffaqiyat faqatgina o'quv markaziga bog'liq emas, balki sizning mustaqil izlanishingiz va amaliy mashg'ulotlarga ajratgan vaqtingiz bilan belgilanadi. Agar siz tajriba orttirgan bo'lsangiz, izohlarda o'z fikringizni qoldiring va boshqalarga yordam bering.
+IT sohasi — bu doimiy izlanish va o'qishni talab qiladigan yo'l. O'zbekistondagi mavjud o'quv markazlari bazasi sizga dastlabki qadamni qo'yishda yordam beradi. Esingizda tuting, muvaffaqiyat faqatgina o'quv markaziga bog'liq emas, balki sizning mustaqil izlanishingiz va amaliy mashg'ulotlarga ajratgan vaqtingiz bilan belgilanadi.

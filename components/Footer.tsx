@@ -23,6 +23,8 @@ export function Footer() {
               <li><Link href="/blog" className="text-ink-2 hover:text-ink">Barcha maqolalar</Link></li>
               <li><Link href="/mavzular" className="text-ink-2 hover:text-ink">Mavzular</Link></li>
               <li><Link href="/qidiruv" className="text-ink-2 hover:text-ink">Qidiruv</Link></li>
+              <li><Link href="/biz-haqida" className="text-ink-2 hover:text-ink">Biz haqimizda</Link></li>
+              <li><a href="/feed.xml" className="text-ink-2 hover:text-ink">RSS lenta</a></li>
             </ul>
           </div>
           <div className="sm:col-span-2">

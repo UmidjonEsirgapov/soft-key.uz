@@ -19,8 +19,14 @@ function normalize(text: string): string {
   return text.toLowerCase().replace(/[‘’ʻʼ`']/g, "");
 }
 
-export function SearchBox({ entries }: { entries: SearchEntry[] }) {
-  const [query, setQuery] = useState("");
+export function SearchBox({
+  entries,
+  initialQuery = "",
+}: {
+  entries: SearchEntry[];
+  initialQuery?: string;
+}) {
+  const [query, setQuery] = useState(initialQuery);
   const deferred = useDeferredValue(query);
 
   const results = useMemo(() => {

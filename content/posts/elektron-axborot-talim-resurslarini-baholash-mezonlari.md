@@ -9,4 +9,27 @@ tags: ["elektron-ta'lim", "edtech", "dasturlash", "metodologiya", "talim"]
 wordCount: 236
 ---
 
-Zamonaviy ta'lim tizimida elektron resurslarning o'rni beqiyos. Sifatli ta'lim dasturlarini yaratish nafaqat dasturchilik mahoratini, balki pedagogik yondashuvni ham talab qiladi. Ushbu maqolada elektron o'quv vositalarini baholashda qo'llaniladigan asosiy mezonlarni tahlil qilamiz. ### Didaktik talablar: Ta'limiy samaradorlik asosi Didaktik talablar dasturning o'quvchi uchun qanchalik tushunarli va foydali ekanligini belgilaydi. Asosiy e'tibor quyidagilarga qaratiladi: - G'oya dolzarbligi: Dastur ta'lim dasturiga mos va zamonaviy g'oyalarni aks ettirishi shart. - Interfeys qulayligi: Yosh xususiyatlarini hisobga olgan holda, sodda va intuitiv dizayn ishlab chiqilishi kerak. - Media boylik: Ovoz, video va animatsiyalardan foydalanish materialni o'zlashtirishni osonlashtiradi. - Psixologik yondashuv: Ranglar tanlovi va shriftlar o'quvchini charchatmasligi lozim. - Milliy qadriyatlar: Kontent milliy mafkura va tarbiyaviy ahamiyatga ega bo'lishi muhimdir. ### Texnik talablar: Dasturiy sifat va barqarorlik Dasturning texnik jihatdan mukammal bo'lishi uning uzoq muddat foydalanishini ta'minlaydi: - Barqarorlik: Dastur xatolarsiz ishlashi va yuklanish tezligi yuqori bo'lishi kerak. - Portativlik: Istalgan qurilmaga moslashuvchanlik va qulay o'rnatish imkoniyati. - Yo'riqnoma: Har bir resurs foydalanuvchilar uchun aniq texnik qo'llanmaga ega bo'lishi shart. - Resurs talablari: Dastur ortiqcha yuklamalarni talab qilmasligi, foydalanish jarayonini murakkablashtirmasligi kerak. ### Xulosa Elektron ta'lim resurslari faqatgina ma'lumot uzatish vositasi emas, balki tarbiya va bilim shakllantirish qurolidir. Yuqorida sanab o'tilgan 15 dan ortiq mezonlar asosida yaratilgan dasturlar nafaqat tanlovlarda yuqori natijalarga erishadi, balki o'quvchilar uchun sifatli bilim manbai bo'lib xizmat qiladi. Kelgusi maqolalarimizda ushbu talablarni dasturiy kodlash jarayonida qanday amalga oshirishni batafsil ko'rib chiqamiz.
+Zamonaviy ta'lim tizimida elektron resurslarning o'rni beqiyos. Sifatli ta'lim dasturlarini yaratish nafaqat dasturchilik mahoratini, balki pedagogik yondashuvni ham talab qiladi. Ushbu maqolada elektron o'quv vositalarini baholashda qo'llaniladigan asosiy mezonlarni tahlil qilamiz.
+
+## Didaktik talablar: Ta'limiy samaradorlik asosi
+
+Didaktik talablar dasturning o'quvchi uchun qanchalik tushunarli va foydali ekanligini belgilaydi. Asosiy e'tibor quyidagilarga qaratiladi:
+
+- **G'oya dolzarbligi:** Dastur ta'lim dasturiga mos va zamonaviy g'oyalarni aks ettirishi shart.
+- **Interfeys qulayligi:** Yosh xususiyatlarini hisobga olgan holda, sodda va intuitiv dizayn ishlab chiqilishi kerak.
+- **Media boylik:** Ovoz, video va animatsiyalardan foydalanish materialni o'zlashtirishni osonlashtiradi.
+- **Psixologik yondashuv:** Ranglar tanlovi va shriftlar o'quvchini charchatmasligi lozim.
+- **Milliy qadriyatlar:** Kontent milliy mafkura va tarbiyaviy ahamiyatga ega bo'lishi muhimdir.
+
+## Texnik talablar: Dasturiy sifat va barqarorlik
+
+Dasturning texnik jihatdan mukammal bo'lishi uning uzoq muddat foydalanishini ta'minlaydi:
+
+- **Barqarorlik:** Dastur xatolarsiz ishlashi va yuklanish tezligi yuqori bo'lishi kerak.
+- **Portativlik:** Istalgan qurilmaga moslashuvchanlik va qulay o'rnatish imkoniyati.
+- **Yo'riqnoma:** Har bir resurs foydalanuvchilar uchun aniq texnik qo'llanmaga ega bo'lishi shart.
+- **Resurs talablari:** Dastur ortiqcha yuklamalarni talab qilmasligi, foydalanish jarayonini murakkablashtirmasligi kerak.
+
+## Xulosa
+
+Elektron ta'lim resurslari faqatgina ma'lumot uzatish vositasi emas, balki tarbiya va bilim shakllantirish qurolidir. Yuqorida sanab o'tilgan 15 dan ortiq mezonlar asosida yaratilgan dasturlar nafaqat tanlovlarda yuqori natijalarga erishadi, balki o'quvchilar uchun sifatli bilim manbai bo'lib xizmat qiladi. Kelgusi maqolalarimizda ushbu talablarni dasturiy kodlash jarayonida qanday amalga oshirishni batafsil ko'rib chiqamiz.
